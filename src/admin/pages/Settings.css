@@ -1,0 +1,132 @@
+.settings-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.settings-section {}
+
+.settings-section-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.settings-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.settings-row-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.settings-row-desc {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 0.15rem;
+}
+
+.theme-toggle-big {
+  background: var(--accent);
+  color: var(--bg-primary);
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  white-space: nowrap;
+  font-family: inherit;
+}
+
+.theme-toggle-big:hover { opacity: 0.85; }
+
+.lang-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.lang-option-btn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.8rem 1rem;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  background: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  text-align: left;
+  color: var(--text-primary);
+}
+
+.lang-option-btn.active {
+  border-color: var(--accent);
+  background: var(--accent-light);
+}
+
+.lang-option-btn:hover:not(.active) {
+  border-color: var(--text-muted);
+  background: var(--bg-secondary);
+}
+
+.lang-option-native {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  min-width: 70px;
+}
+
+.lang-option-label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  flex: 1;
+}
+
+.lang-check {
+  color: var(--success);
+  font-weight: 700;
+}
+
+.info-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.info-row-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.info-row-input {
+  background: var(--input-bg);
+  border: 1.5px solid var(--input-border);
+  border-radius: 6px;
+  padding: 0.6rem 0.8rem;
+  font-size: 0.88rem;
+  color: var(--text-primary);
+  outline: none;
+  transition: border-color 0.2s;
+  font-family: inherit;
+  width: 100%;
+}
+
+.info-row-input:focus { border-color: var(--input-focus); }
+.info-row-input[readonly] { opacity: 0.6; cursor: not-allowed; }
+
+@media (max-width: 768px) {
+  .settings-grid { grid-template-columns: 1fr; }
+}

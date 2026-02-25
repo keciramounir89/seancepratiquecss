@@ -1,0 +1,53 @@
+.att-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.att-summary-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.25rem;
+}
+
+.att-summary-icon { font-size: 1.5rem; margin-bottom: 0.4rem; }
+.att-summary-label { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 0.2rem; font-weight: 500; }
+.att-summary-value { font-size: 1.6rem; font-weight: 800; color: var(--text-primary); }
+
+.att-legend {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.week-select {
+  background: var(--input-bg);
+  border: 1.5px solid var(--input-border);
+  border-radius: 6px;
+  padding: 0.5rem 0.8rem;
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  outline: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.mini-progress-bg {
+  width: 60px;
+  height: 6px;
+  background: var(--bg-tertiary);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.mini-progress-bar {
+  height: 100%;
+  border-radius: 3px;
+}
+
+@media (max-width: 768px) {
+  .att-summary-grid { grid-template-columns: repeat(2, 1fr); }
+}
