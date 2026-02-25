@@ -1,0 +1,56 @@
+.classes-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.class-level-card {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 1rem 1.25rem;
+}
+
+.class-level-icon { font-size: 1.5rem; }
+
+.class-level-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.class-level-count {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.class-name-cell {
+  display: flex;
+  align-items: center;
+}
+
+.class-badge {
+  padding: 0.3rem 0.75rem;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.88rem;
+}
+
+.mini-progress-bg {
+  width: 60px;
+  height: 6px;
+  background: var(--bg-tertiary);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.mini-progress-bar {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 3px;
+}
+
+@media (max-width: 600px) {
+  .classes-summary { grid-template-columns: 1fr; }
+}
